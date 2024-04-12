@@ -1,0 +1,26 @@
+Reading netlist file: "D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis\riscv_project.vg"
+Parsing netlist file "D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis\riscv_project.vg" completed
+Processing netlist completed
+Reading constraint file: "D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\riscv_project.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Generate file "D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\pnr\riscv_project.pin.html" completed
+Generate file "D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\pnr\riscv_project.rpt.html" completed
+Generate file "D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\pnr\riscv_project.rpt.txt" completed
+Generate file "D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\pnr\riscv_project.tr.html" completed
+Fri Apr 12 10:29:24 2024
+

@@ -1,0 +1,17 @@
+-d D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis\riscv_project.vg
+-p GW5A-25A-MBGA121N-1
+-pn GW5A-LV25MG121NC1/I0
+-cst D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\riscv_project.cst
+-cfg D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\pnr\device.cfg
+-sdc D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\riscv_project.sdc
+-gao_crc 0000101110000010
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000
+-enable_dsrm 0
+-rtl_gao

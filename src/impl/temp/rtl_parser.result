@@ -1,0 +1,46 @@
+[
+ {
+  "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
+  "InstLine" : 3,
+  "InstName" : "system",
+  "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "system",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
+    "InstLine" : 25,
+    "InstName" : "system_clock",
+    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/gowin_pll/gowin_pll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL"
+   },
+   {
+    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
+    "InstLine" : 48,
+    "InstName" : "dds_control",
+    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_time_control.v",
+    "ModuleLine" : 23,
+    "ModuleName" : "dds_time_control",
+    "SubInsts" : [
+     {
+      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_time_control.v",
+      "InstLine" : 108,
+      "InstName" : "drover_width",
+      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/pulse2width.v",
+      "ModuleLine" : 24,
+      "ModuleName" : "pulse2width"
+     },
+     {
+      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_time_control.v",
+      "InstLine" : 154,
+      "InstName" : "osk_pulse",
+      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/width2pulse.v",
+      "ModuleLine" : 23,
+      "ModuleName" : "width2pulse"
+     }
+    ]
+   }
+  ]
+ }
+]

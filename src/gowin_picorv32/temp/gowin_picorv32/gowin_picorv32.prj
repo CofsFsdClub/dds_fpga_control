@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5A-25A" package="MBGA121N" speed="1" partNumber="GW5A-LV25MG121NC1/I0"/>
+    <FileList>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/picorv32.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/picosoc.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/advspi.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/ahb_bus.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/picosoc_dtcm.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/picosoc_itcm.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/wb_bus.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/wb_brancher.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/wbgpio.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/wbi2c.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/wbspi.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/wbuart.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/simpleuart.v" type="verilog"/>
+        <File path="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32/dm.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="include_path" value="E:/Development/Gowin/Gowin_V1.9.9Beta-4_Education_win/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/GowinPicoRV32/Gowin_PicoRV32"/>
+        <Option type="include_path" value="D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_project/riscv_project/src/gowin_picorv32/temp/gowin_picorv32"/>
+        <Option type="output_file" value="gowin_picorv32.vg"/>
+        <Option type="output_template" value="gowin_picorv32_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="top_module" value="Gowin_PicoRV32_Top"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

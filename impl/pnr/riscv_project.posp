@@ -1,0 +1,43 @@
+//Copyright (C)2014-2023 Gowin Semiconductor Corporation.
+//All rights reserved.
+//File Title: Post-Place file
+//GOWIN Version: V1.9.9 Beta-4 Education
+//Part Number: GW5A-LV25MG121NC1/I0
+//Device: GW5A-25
+//Device Version: A
+//Created Time: Sun Mar 31 16:57:19 2024
+
+core/pcpi_mul/mult_35_s5 PLACE_DSP_R19[16] //R19C50
+core/pcpi_mul/mult_35_s4 PLACE_DSP_R19[12] //R19C38
+itcm/memory_0_memory_0_0_0_s PLACE_BSRAM_R28[12]
+itcm/memory_0_memory_0_0_1_s PLACE_BSRAM_R28[13]
+itcm/memory_0_memory_0_0_2_s PLACE_BSRAM_R28[14]
+itcm/memory_0_memory_0_0_3_s PLACE_BSRAM_R28[15]
+itcm/memory_1_memory_1_0_0_s PLACE_BSRAM_R28[16]
+itcm/memory_1_memory_1_0_1_s PLACE_BSRAM_R28[17]
+itcm/memory_1_memory_1_0_2_s PLACE_BSRAM_R10[18]
+itcm/memory_1_memory_1_0_3_s PLACE_BSRAM_R28[18]
+itcm/memory_2_memory_2_0_0_s PLACE_BSRAM_R10[19]
+itcm/memory_2_memory_2_0_1_s PLACE_BSRAM_R28[19]
+itcm/memory_2_memory_2_0_2_s PLACE_BSRAM_R28[20]
+itcm/memory_2_memory_2_0_3_s PLACE_BSRAM_R28[21]
+itcm/memory_3_memory_3_0_0_s PLACE_BSRAM_R28[22]
+itcm/memory_3_memory_3_0_1_s PLACE_BSRAM_R28[23]
+itcm/memory_3_memory_3_0_2_s PLACE_BSRAM_R28[24]
+itcm/memory_3_memory_3_0_3_s PLACE_BSRAM_R28[25]
+dtcm/mem_0_mem_0_0_0_s PLACE_BSRAM_R28[7]
+dtcm/mem_0_mem_0_0_1_s PLACE_BSRAM_R28[8]
+dtcm/mem_0_mem_0_0_2_s PLACE_BSRAM_R28[9]
+dtcm/mem_0_mem_0_0_3_s PLACE_BSRAM_R28[10]
+dtcm/mem_1_mem_1_0_0_s PLACE_BSRAM_R28[11]
+dtcm/mem_1_mem_1_0_1_s PLACE_BSRAM_R10[13]
+dtcm/mem_1_mem_1_0_2_s PLACE_BSRAM_R10[14]
+dtcm/mem_1_mem_1_0_3_s PLACE_BSRAM_R10[15]
+dtcm/mem_2_mem_2_0_0_s PLACE_BSRAM_R10[16]
+dtcm/mem_2_mem_2_0_1_s PLACE_BSRAM_R10[17]
+dtcm/mem_2_mem_2_0_2_s PLACE_BSRAM_R10[20]
+dtcm/mem_2_mem_2_0_3_s PLACE_BSRAM_R10[21]
+dtcm/mem_3_mem_3_0_0_s PLACE_BSRAM_R10[22]
+dtcm/mem_3_mem_3_0_1_s PLACE_BSRAM_R10[23]
+dtcm/mem_3_mem_3_0_2_s PLACE_BSRAM_R28[26]
+dtcm/mem_3_mem_3_0_3_s PLACE_BSRAM_R28[27]

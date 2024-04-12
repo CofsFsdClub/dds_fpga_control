@@ -1,0 +1,48 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Fri Apr 12 11:43:25 2024
+| Host         : DESKTOP-50LO50C running 64-bit major release  (build 9200)
+| Command      : report_drc -file uart_test_top_drc_opted.rpt -pb uart_test_top_drc_opted.pb -rpx uart_test_top_drc_opted.rpx
+| Design       : uart_test_top
+| Device       : xc7z020clg400-2
+| Speed File   : -2
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++--------+----------+-----------------------+------------+
+| Rule   | Severity | Description           | Violations |
++--------+----------+-----------------------+------------+
+| IOSR-1 | Warning  | IOB set reset sharing | 1          |
+| ZPS7-1 | Warning  | PS7 block required    | 1          |
++--------+----------+-----------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+IOSR-1#1 Warning
+IOB set reset sharing  
+IO uart_rxd connects to flops which have these uart_rec_decode/u_uart_rx/uart_rx_data_reg[7]_i_1_n_0
+uart_rec_decode_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
