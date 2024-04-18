@@ -105,5 +105,5 @@ always@(posedge sys_clk)begin
 		uart_rx_data<=8'd0;
 	end
 end
-assign rx_done = uart_rx_valid&&clk_cnt == BPS_CNT/2;
+assign rx_done = uart_rx_valid&&clk_cnt == BPS_CNT/2+1;
 endmodule

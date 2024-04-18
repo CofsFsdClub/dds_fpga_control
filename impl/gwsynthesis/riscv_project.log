@@ -1,9 +1,18 @@
 GowinSynthesis start
 Running parser ...
+Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_cmd_set.v'
+Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_control_v5.v'
 Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_time_control.v'
 Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\pulse2width.v'
+Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v'
+Undeclared symbol 'ad9910_reg16_valid', assumed default net type 'wire'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":338)
+Undeclared symbol 'ad9910_reg16', assumed default net type 'wire'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":339)
+WARN  (EX3786) : Assignment to input 'MISO_I'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":449)
 Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\width2pulse.v'
+Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\gowin_dce\gowin_dce.v'
 Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\gowin_pll\gowin_pll.v'
+Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\spi\spi_clock.v'
+Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\spi\spi_master.v'
 Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v'
 Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_decode.v'
 Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_rx.v'
@@ -23,15 +32,45 @@ Analyzing included file '**'("E:\Development\Gowin\Gowin_V1.9.9.02_x64_win\Gowin
 Back to file '**'("E:\Development\Gowin\Gowin_V1.9.9.02_x64_win\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
 Analyzing Verilog file 'E:\Development\Gowin\Gowin_V1.9.9.02_x64_win\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v'
 Analyzing Verilog file 'D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis\RTL_GAO\gw_gao_top.v'
-WARN  (EX3073) : Port 'data_done' remains unconnected for this instance("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v":107)
 Compiling module 'system'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v":3)
 Compiling module 'Gowin_PLL'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\gowin_pll\gowin_pll.v":10)
-Compiling module 'dds_time_control(PULSE=2000)'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_time_control.v":23)
-Compiling module 'pulse2width'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\pulse2width.v":24)
-Compiling module 'width2pulse'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\width2pulse.v":23)
-Compiling module 'uart_decode'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_decode.v":23)
+Compiling module 'Gowin_DCE'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\gowin_dce\gowin_dce.v":10)
+WARN  (EX3073) : Port 'byte_valid' remains unconnected for this instance("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_cmd_set.v":50)
+Compiling module 'dds_cmd_set'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_cmd_set.v":1)
+Compiling module 'uart_decode(HEAD_FREAME_1=8'b10101010,HEAD_FREAME_2=8'b01010101,END_FREAME=8'b11001110)'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_decode.v":23)
 Compiling module 'uart_rx(BPS=115200)'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_rx.v":1)
 Compiling module 'uart_tx(BPS=115200)'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_tx.v":1)
+Compiling module 'uart2spi_decode(SPI_CLK=2000)'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":21)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":137)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":141)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":157)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":161)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":178)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":182)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":199)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":203)
+WARN  (EX3791) : Expression size 80 truncated to fit in target size 72("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":219)
+WARN  (EX3791) : Expression size 80 truncated to fit in target size 72("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":223)
+WARN  (EX3791) : Expression size 80 truncated to fit in target size 72("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":240)
+WARN  (EX3791) : Expression size 80 truncated to fit in target size 72("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":244)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":260)
+WARN  (EX3791) : Expression size 48 truncated to fit in target size 40("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":264)
+WARN  (EX3791) : Expression size 80 truncated to fit in target size 72("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":281)
+WARN  (EX3791) : Expression size 80 truncated to fit in target size 72("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":285)
+WARN  (EX3791) : Expression size 24 truncated to fit in target size 16("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":303)
+WARN  (EX3791) : Expression size 24 truncated to fit in target size 16("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":307)
+WARN  (EX3791) : Expression size 24 truncated to fit in target size 16("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":323)
+WARN  (EX3791) : Expression size 24 truncated to fit in target size 16("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":327)
+Compiling module 'SPI_Master(SPI_CLK=2000,DATA_WIDTH=40)'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\spi\spi_master.v":2)
+Compiling module 'spi_clock(CPOL=0,SPI_CLK_FREQ=2000)'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\spi\spi_clock.v":2)
+Compiling module 'SPI_Master(SPI_CLK=2000,DATA_WIDTH=72)'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\spi\spi_master.v":2)
+Driving port 'MISO_I' is declared here("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":45)
+Port is declared here("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":45)
+WARN  (EX1998) : Net 'spi_miso40' does not have a driver("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":388)
+WARN  (EX1998) : Net 'spi_miso72' does not have a driver("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v":416)
+Compiling module 'dds_control_v5'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_control_v5.v":1)
+Compiling module 'pulse2width'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\pulse2width.v":24)
+Compiling module 'width2pulse'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\width2pulse.v":23)
 Compiling module 'gw_gao'("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis\RTL_GAO\gw_gao_top.v":1)
 Compiling module 'GW_JTAG'("E:\Development\Gowin\Gowin_V1.9.9.02_x64_win\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v":1)
 Compiling module '**'("E:\Development\Gowin\Gowin_V1.9.9.02_x64_win\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
@@ -44,12 +83,9 @@ WARN  (EX3791) : Expression size ** truncated to fit in target size **("E:\Devel
 Extracting RAM for identifier '**'("E:\Development\Gowin\Gowin_V1.9.9.02_x64_win\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v":3042)
 Trying to combine GAO to RTL design
 NOTE  (EX0101) : Current top module is "system"
-WARN  (EX0211) : The output port "master_reset" of module "system" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v":15)
-WARN  (EX0211) : The output port "spi_clk" of module "system" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v":18)
-WARN  (EX0211) : The output port "spi_mosi" of module "system" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v":19)
-WARN  (EX0211) : The output port "spi_cs" of module "system" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v":21)
+WARN  (EX0211) : The output port "drhold" of module "dds_control_v5" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_control_v5.v":15)
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input spi_miso is unused("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v":20)
+WARN  (CV0016) : Input spi_miso is unused("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v":26)
 WARN  (CV0017) : Inout io_spi_clk is unused("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v":5)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
@@ -66,6 +102,8 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "pulse2width" instantiated to "drover_width" is swept in optimizing("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_control_v5.v":79)
+WARN  (NL0002) : The module "width2pulse" instantiated to "osk_pulse" is swept in optimizing("D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_control_v5.v":100)
 [95%] Generate netlist file "D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis\riscv_project.vg" completed
 [100%] Generate report file "D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis\riscv_project_syn.rpt.html" completed
 GowinSynthesis finish

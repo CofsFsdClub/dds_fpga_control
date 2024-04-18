@@ -2,35 +2,59 @@
  "Device" : "GW5A-25A",
  "Files" : [
   {
-   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_time_control.v",
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_cmd_set.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/pulse2width.v",
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_control_v5.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/width2pulse.v",
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_time_control.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/gowin_pll/gowin_pll.v",
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/pulse2width.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/uart2spi_decode.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/uart/uart_decode.v",
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/width2pulse.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/uart/uart_rx.v",
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/gowin_dce/gowin_dce.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/uart/uart_tx.v",
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/gowin_pll/gowin_pll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/spi/spi_clock.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/spi/spi_master.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/system.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/uart/uart_decode.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/uart/uart_rx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/uart/uart_tx.v",
    "Type" : "verilog"
   }
  ],
@@ -38,7 +62,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/impl/temp/rtl_parser.result",
+ "ResultFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/impl/temp/rtl_parser.result",
  "Top" : "system",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"

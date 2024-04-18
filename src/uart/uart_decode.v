@@ -18,7 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-//串口只会解析 A6|num|addr|cmd|CE的代码 1+0+1+7+1
+//串口只会解析 AA|55|num|addr|cmd|CE的代码 1+1+9+1+7+1
 //最终只需要获得addr 和 cmd的数值
 module uart_decode#
 (
@@ -26,7 +26,8 @@ module uart_decode#
     parameter CLK_FREQ = 50_000_000,
     parameter ADDR_WIDTH = 8, //地址字节
     parameter CMD_WIDTH = 8, //指令字节 最大
-    parameter HEAD_FREAME = 8'hA6, //定义头帧
+    parameter HEAD_FREAME_1 = 8'hAA, //定义头帧1
+    parameter HEAD_FREAME_2 = 8'h55, //定义头帧2
     parameter END_FREAME = 8'hCE//定义尾帧
 )(
 	input 			sys_clk,			//50M系统时钟
@@ -63,11 +64,12 @@ u_uart_rx(
 );
 assign byte_valid = uart_rx_valid;
 
-localparam REC_IDLE = 3'b000;//等待字符接收 获取头帧
-localparam NUM_STATE = 3'b001;//检索字符串指令有多少个字节
-localparam ADDR_STATE= 3'b010;//检索地址
-localparam CMD_STATE = 3'b100;//获取指令
-localparam END_STATE = 3'b101;//等待字符接收 获取尾帧
+localparam REC_IDLE = 3'b000;//等待字符接收 获取头帧1
+localparam START_STATE = 3'b001;//获取头帧2
+localparam NUM_STATE = 3'b010;//检索字符串指令有多少个字节
+localparam ADDR_STATE= 3'b100;//检索地址
+localparam CMD_STATE = 3'b101;//获取指令
+localparam END_STATE = 3'b110;//等待字符接收 获取尾帧
 localparam ERROR_STATE = 3'b111;
 
 reg [2:0]rec_state;
@@ -85,7 +87,12 @@ reg[7:0] byte_cnt;
 always @(posedge sys_clk)begin
     case(rec_state_nxt)
         REC_IDLE:begin
-            if(rx_done&&byte_rec == HEAD_FREAME)begin//检测到头帧，开始接收字符串
+            if(rx_done&&byte_rec == HEAD_FREAME_1)begin//检测到头帧1，开始状态机
+                rec_state <= START_STATE;
+             end
+        end
+        START_STATE:begin
+            if(rx_done&&byte_rec == HEAD_FREAME_2)begin//检测到头帧2，开始接收字符串
                 rec_state <= NUM_STATE;
              end
         end
@@ -122,7 +129,16 @@ reg addr_rec_flag; //接收字节有效标志
 reg cmd_rec_flag; //接收字节有效标志
 always @(posedge sys_clk)begin
     if(rec_state_nxt == REC_IDLE)begin
-        addr_data_reg <= 'b0;
+        addr_data_reg <= 'b0; //
+        cmd_data_reg <= 'b0;
+        byte_cnt_max <= 'b0;
+        byte_cnt <= 'b0;
+        byte_cnt_all <= 'b0;
+        addr_rec_flag <= 1'b0;
+        cmd_rec_flag <= 1'b0;
+    end
+    else if(rx_done&&rec_state_nxt == START_STATE)begin
+        addr_data_reg <= 'b0; //
         cmd_data_reg <= 'b0;
         byte_cnt_max <= 'b0;
         byte_cnt <= 'b0;
@@ -164,6 +180,6 @@ assign addr_data = addr_data_reg;
 assign cmd_data = cmd_data_reg;
 
 assign data_done = rx_done&&byte_cnt_all == byte_cnt_max + 2;
-assign addr_data_valid = uart_rx_valid&&addr_rec_flag;
-assign cmd_data_valid = uart_rx_valid&&cmd_rec_flag;
+assign addr_data_valid = rx_done&&addr_rec_flag;
+assign cmd_data_valid = rx_done&&cmd_rec_flag;
 endmodule

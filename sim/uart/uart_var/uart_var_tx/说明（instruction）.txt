@@ -1,2 +1,0 @@
-添加目录下所有.v文件即可！
-Add all.v files in this directory to your project!

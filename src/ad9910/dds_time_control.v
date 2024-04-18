@@ -21,10 +21,10 @@
 //该版本为 io_update触发 drover下降沿触发，drctl为pwm型信号调制，实现啁啾信号
 
 module dds_time_control #(   
-    parameter FRE = 10000,//Hz  10kHz
-    parameter PULSE = 1000,//ns 1us
-    parameter CLKNUM = 2, //ns 时钟500MHz 1/500MHz
-    parameter MAX_CNT = 1_000_000_000/FRE/CLKNUM//1s/fre/(1/50MHz)
+    //parameter FRE = 10000,//Hz  10kHz
+    //parameter PULSE = 1000,//ns 1us
+    parameter CLKNUM = 2 //ns 时钟500MHz 1/500MHz
+    //parameter MAX_CNT = 1_000_000_000/FRE/CLKNUM//1s/fre/(1/50MHz)
 )(
     input sys_clk,//500MHz
     input sys_rst,
@@ -36,10 +36,16 @@ module dds_time_control #(
  
     output osk,
     output drctl,
-    output drhold
+    output drhold,
+
+    input[15:0] triger_pulse
     );
 
+wire[15:0]PULSE;
+assign PULSE = triger_pulse; //该参数由上位机传递给FPGA，在没接收到指令之前，一直为0，只有接收到指令之后才开始产生啁啾信号！！！！！！！！！！！！
+
 assign drhold = 1'b0; //该信号引脚没用上
+
 //对io_update信号打拍处理，用于判断上升沿   
 reg [1:0]io_update_reg;
 always@(posedge sys_clk)begin
@@ -163,18 +169,6 @@ width2pulse#(
     .pulse_valid_out(osk)              //电平输出
     );
 
-//reg drhold_reg;
-//always @(posedge sys_clk)begin
-//    if(sys_rst)begin
-//        drhold_reg <= 1'b0;
-//    end
-//    else if((triger_state == WAITDROVER)&&(drover_cnt == 0))begin
-//        drhold_reg <= 1'b1;
-//    end
-//    else begin
-//        drhold_reg <= 1'b0;
-//    end
-//end
 assign drctl = drctl_reg;
-//assign drhold = drhold_reg;
+
 endmodule

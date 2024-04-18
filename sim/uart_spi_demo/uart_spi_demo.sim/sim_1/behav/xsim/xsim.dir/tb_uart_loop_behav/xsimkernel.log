@@ -1,4 +1,0 @@
-Running: xsim.dir/tb_uart_loop_behav/xsimk.exe -simmode gui -wdb tb_uart_loop_behav.wdb -simrunnum 0 -socket 61927
-Design successfully loaded
-Design Loading Memory Usage: 8132 KB (Peak: 8132 KB)
-Design Loading CPU Usage: 0 ms

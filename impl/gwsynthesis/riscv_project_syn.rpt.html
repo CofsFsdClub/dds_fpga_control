@@ -55,10 +55,16 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Design File</td>
-<td>D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_time_control.v<br>
+<td>D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_cmd_set.v<br>
+D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_control_v5.v<br>
+D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_time_control.v<br>
 D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\pulse2width.v<br>
+D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v<br>
 D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\width2pulse.v<br>
+D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\gowin_dce\gowin_dce.v<br>
 D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\gowin_pll\gowin_pll.v<br>
+D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\spi\spi_clock.v<br>
+D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\spi\spi_master.v<br>
 D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v<br>
 D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_decode.v<br>
 D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_rx.v<br>
@@ -94,7 +100,7 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Fri Apr 12 10:29:17 2024
+<td>Wed Apr 17 17:42:34 2024
 </td>
 </tr>
 <tr>
@@ -110,11 +116,11 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">Synthesis Process</td>
-<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.109s, Elapsed time = 0h 0m 0.261s, Peak memory usage = 699.246MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.032s, Peak memory usage = 699.246MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.015s, Peak memory usage = 699.246MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.035s, Peak memory usage = 699.246MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.008s, Peak memory usage = 699.246MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 699.246MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 699.246MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 699.246MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.029s, Peak memory usage = 699.246MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.011s, Peak memory usage = 699.246MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.014s, Peak memory usage = 699.246MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 0.968s, Elapsed time = 0h 0m 1s, Peak memory usage = 699.246MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.047s, Peak memory usage = 699.246MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.048s, Peak memory usage = 699.246MB<br/></td>
+<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.265s, Elapsed time = 0h 0m 0.308s, Peak memory usage = 599.840MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.062s, Elapsed time = 0h 0m 0.065s, Peak memory usage = 599.840MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.029s, Peak memory usage = 599.840MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.066s, Peak memory usage = 599.840MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.015s, Peak memory usage = 599.840MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 599.840MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.004s, Peak memory usage = 599.840MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 599.840MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.066s, Peak memory usage = 599.840MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.027s, Peak memory usage = 599.840MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.029s, Peak memory usage = 599.840MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s, Peak memory usage = 599.840MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.079s, Peak memory usage = 599.840MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.093s, Elapsed time = 0h 0m 0.072s, Peak memory usage = 599.840MB<br/></td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s, Peak memory usage = 699.246MB</td>
+<td>CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s, Peak memory usage = 599.840MB</td>
 </tr>
 </table>
 <h1><a name="resource">Resource</a></h1>
@@ -126,11 +132,11 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label"><b>I/O Port </b></td>
-<td>21</td>
+<td>26</td>
 </tr>
 <tr>
 <td class="label"><b>I/O Buf </b></td>
-<td>19</td>
+<td>24</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspIBUF</td>
@@ -138,15 +144,11 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspOBUF</td>
-<td>7</td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspTBUF</td>
-<td>4</td>
+<td>16</td>
 </tr>
 <tr>
 <td class="label"><b>Register </b></td>
-<td>563</td>
+<td>1201</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFSE</td>
@@ -154,7 +156,7 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFRE</td>
-<td>142</td>
+<td>587</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFPE</td>
@@ -162,23 +164,23 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFCE</td>
-<td>384</td>
+<td>577</td>
 </tr>
 <tr>
 <td class="label"><b>LUT </b></td>
-<td>638</td>
+<td>1322</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
-<td>87</td>
+<td>133</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
-<td>128</td>
+<td>383</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
-<td>423</td>
+<td>806</td>
 </tr>
 <tr>
 <td class="label"><b>MUX </b></td>
@@ -190,30 +192,34 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label"><b>ALU </b></td>
-<td>84</td>
+<td>75</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspALU</td>
-<td>84</td>
+<td>75</td>
 </tr>
 <tr>
 <td class="label"><b>INV </b></td>
-<td>12</td>
+<td>13</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
-<td>12</td>
+<td>13</td>
 </tr>
 <tr>
 <td class="label"><b>BSRAM </b></td>
-<td>14</td>
+<td>6</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspSDPB</td>
-<td>14</td>
+<td>6</td>
 </tr>
 <tr>
 <td class="label"><b>CLOCK </b></td>
+<td>2</td>
+</tr>
+<tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspDCE</td>
 <td>1</td>
 </tr>
 <tr>
@@ -238,13 +244,13 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>742(658 LUT, 84 ALU) / 23040</td>
-<td>4%</td>
+<td>1418(1343 LUT, 75 ALU) / 23040</td>
+<td>7%</td>
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>563 / 23280</td>
-<td>3%</td>
+<td>1201 / 23280</td>
+<td>6%</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as Latch</td>
@@ -253,13 +259,13 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as FF</td>
-<td>563 / 23280</td>
-<td>3%</td>
+<td>1201 / 23280</td>
+<td>6%</td>
 </tr>
 <tr>
 <td class="label">BSRAM</td>
-<td>14 / 56</td>
-<td>25%</td>
+<td>6 / 56</td>
+<td>11%</td>
 </tr>
 </table>
 <h1><a name="timing">Timing</a></h1>
@@ -286,6 +292,17 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <td> </td>
 <td> </td>
 <td>clk_in_ibuf/I </td>
+</tr>
+<tr>
+<td>sysclk_bufg/clk_500m</td>
+<td>Base</td>
+<td>10.000</td>
+<td>100.0</td>
+<td>0.000</td>
+<td>5.000</td>
+<td> </td>
+<td> </td>
+<td>sysclk_bufg/dce_inst/CLKOUT </td>
 </tr>
 <tr>
 <td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
@@ -322,26 +339,18 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td>1</td>
-<td>clk_in</td>
-<td>50.000(MHz)</td>
-<td>188.635(MHz)</td>
-<td>6</td>
+<td>sysclk_bufg/clk_500m</td>
+<td>100.000(MHz)</td>
+<td>213.961(MHz)</td>
+<td>5</td>
 <td>TOP</td>
 </tr>
 <tr>
 <td>2</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
-<td>500.000(MHz)</td>
-<td>190.386(MHz)</td>
-<td>6</td>
-<td>TOP</td>
-</tr>
-<tr>
-<td>3</td>
 <td>system_clk/PLLA_inst/CLKOUT1.default_gen_clk</td>
 <td>50.000(MHz)</td>
-<td>179.816(MHz)</td>
-<td>7</td>
+<td>169.887(MHz)</td>
+<td>8</td>
 <td>TOP</td>
 </tr>
 </table>
@@ -351,31 +360,31 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-3.252</td>
+<td>5.326</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>5.869</td>
+<td>4.737</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>2.616</td>
+<td>10.064</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>dds_control/drover_width/self_add_count_reg_5_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_6_s1</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>dds_control/triger_state_2_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_loop_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -394,119 +403,103 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>0.305</td>
-<td>0.305</td>
+<td>0.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>0.680</td>
+<td>0.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/drover_width/self_add_count_reg_5_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_6_s1/CLK</td>
 </tr>
 <tr>
-<td>1.062</td>
+<td>0.757</td>
 <td>0.382</td>
 <td>tC2Q</td>
 <td>RR</td>
-<td>3</td>
-<td>dds_control/drover_width/self_add_count_reg_5_s0/Q</td>
+<td>10</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_6_s1/Q</td>
 </tr>
 <tr>
-<td>1.438</td>
+<td>1.132</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/osk_pulse/n8_s2/I0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s7/I0</td>
 </tr>
 <tr>
-<td>1.964</td>
-<td>0.526</td>
-<td>tINS</td>
-<td>RR</td>
-<td>3</td>
-<td>dds_control/osk_pulse/n8_s2/F</td>
-</tr>
-<tr>
-<td>2.339</td>
-<td>0.375</td>
-<td>tNET</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/n83_s14/I2</td>
-</tr>
-<tr>
-<td>2.800</td>
-<td>0.461</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/n83_s14/F</td>
-</tr>
-<tr>
-<td>3.175</td>
-<td>0.375</td>
-<td>tNET</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/n83_s12/I1</td>
-</tr>
-<tr>
-<td>3.691</td>
-<td>0.516</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/n83_s12/F</td>
-</tr>
-<tr>
-<td>4.066</td>
-<td>0.375</td>
-<td>tNET</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/n83_s11/I0</td>
-</tr>
-<tr>
-<td>4.592</td>
+<td>1.659</td>
 <td>0.526</td>
 <td>tINS</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n83_s11/F</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s7/F</td>
 </tr>
 <tr>
-<td>4.967</td>
+<td>2.034</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n83_s10/I0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s5/I0</td>
 </tr>
 <tr>
-<td>5.494</td>
+<td>2.560</td>
+<td>0.526</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s5/F</td>
+</tr>
+<tr>
+<td>2.935</td>
+<td>0.375</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s4/I0</td>
+</tr>
+<tr>
+<td>3.461</td>
+<td>0.526</td>
+<td>tINS</td>
+<td>RR</td>
+<td>12</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s4/F</td>
+</tr>
+<tr>
+<td>3.836</td>
+<td>0.375</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_loop_s4/I0</td>
+</tr>
+<tr>
+<td>4.362</td>
 <td>0.526</td>
 <td>tINS</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n83_s10/F</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_loop_s4/F</td>
 </tr>
 <tr>
-<td>5.869</td>
+<td>4.737</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/triger_state_2_s0/D</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_loop_s1/CE</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -520,36 +513,36 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <th>NODE</th>
 </tr>
 <tr>
-<td>2.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>2.305</td>
-<td>0.305</td>
+<td>10.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>2.680</td>
+<td>10.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/triger_state_2_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_loop_s1/CLK</td>
 </tr>
 <tr>
-<td>2.616</td>
-<td>-0.064</td>
+<td>10.064</td>
+<td>-0.311</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>dds_control/triger_state_2_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_loop_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -560,16 +553,16 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>2.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>6</td>
+<td>5</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 2.556, 49.265%; route: 2.250, 43.363%; tC2Q: 0.382, 7.372%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.105, 48.252%; route: 1.875, 42.980%; tC2Q: 0.382, 8.768%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 </table>
@@ -579,31 +572,31 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-3.197</td>
+<td>5.401</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>5.814</td>
+<td>4.662</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>2.616</td>
+<td>10.064</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>dds_control/drover_width/self_add_count_reg_5_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_4_s1</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>dds_control/triger_state_1_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_wr_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -622,119 +615,103 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>0.305</td>
-<td>0.305</td>
+<td>0.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>0.680</td>
+<td>0.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/drover_width/self_add_count_reg_5_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_4_s1/CLK</td>
 </tr>
 <tr>
-<td>1.062</td>
+<td>0.757</td>
 <td>0.382</td>
 <td>tC2Q</td>
 <td>RR</td>
-<td>3</td>
-<td>dds_control/drover_width/self_add_count_reg_5_s0/Q</td>
+<td>4</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_4_s1/Q</td>
 </tr>
 <tr>
-<td>1.438</td>
+<td>1.132</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/osk_pulse/n8_s2/I0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n228_s2/I0</td>
 </tr>
 <tr>
-<td>1.964</td>
+<td>1.659</td>
 <td>0.526</td>
 <td>tINS</td>
 <td>RR</td>
-<td>3</td>
-<td>dds_control/osk_pulse/n8_s2/F</td>
+<td>4</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n228_s2/F</td>
 </tr>
 <tr>
-<td>2.339</td>
+<td>2.034</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n83_s15/I2</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/mem_addr_inc_en_s4/I1</td>
 </tr>
 <tr>
-<td>2.800</td>
-<td>0.461</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/n83_s15/F</td>
-</tr>
-<tr>
-<td>3.175</td>
-<td>0.375</td>
-<td>tNET</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/n83_s13/I2</td>
-</tr>
-<tr>
-<td>3.636</td>
-<td>0.461</td>
+<td>2.550</td>
+<td>0.516</td>
 <td>tINS</td>
 <td>RR</td>
 <td>2</td>
-<td>dds_control/n83_s13/F</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/mem_addr_inc_en_s4/F</td>
 </tr>
 <tr>
-<td>4.011</td>
+<td>2.925</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n84_s11/I0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_wr_s5/I0</td>
 </tr>
 <tr>
-<td>4.537</td>
+<td>3.451</td>
 <td>0.526</td>
 <td>tINS</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n84_s11/F</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_wr_s5/F</td>
 </tr>
 <tr>
-<td>4.912</td>
+<td>3.826</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n84_s10/I0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_wr_s3/I2</td>
 </tr>
 <tr>
-<td>5.439</td>
-<td>0.526</td>
+<td>4.287</td>
+<td>0.461</td>
 <td>tINS</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n84_s10/F</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_wr_s3/F</td>
 </tr>
 <tr>
-<td>5.814</td>
+<td>4.662</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/triger_state_1_s0/D</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_wr_s1/CE</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -748,36 +725,36 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <th>NODE</th>
 </tr>
 <tr>
-<td>2.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>2.305</td>
-<td>0.305</td>
+<td>10.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>2.680</td>
+<td>10.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/triger_state_1_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_wr_s1/CLK</td>
 </tr>
 <tr>
-<td>2.616</td>
-<td>-0.064</td>
+<td>10.064</td>
+<td>-0.311</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>dds_control/triger_state_1_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_wr_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -788,16 +765,16 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>2.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>6</td>
+<td>5</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 2.501, 48.721%; route: 2.250, 43.828%; tC2Q: 0.382, 7.451%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.030, 47.347%; route: 1.875, 43.732%; tC2Q: 0.382, 8.921%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 </table>
@@ -807,31 +784,31 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-2.087</td>
+<td>5.639</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>4.704</td>
+<td>4.673</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>2.616</td>
+<td>10.311</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>dds_control/drover_width/self_add_count_reg_0_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_2_s1</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>dds_control/osk_pulse/pulse_valid_out_reg_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_10_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -850,103 +827,103 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>0.305</td>
-<td>0.305</td>
+<td>0.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>0.680</td>
+<td>0.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/drover_width/self_add_count_reg_0_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_2_s1/CLK</td>
 </tr>
 <tr>
-<td>1.062</td>
+<td>0.757</td>
 <td>0.382</td>
 <td>tC2Q</td>
 <td>RR</td>
 <td>4</td>
-<td>dds_control/drover_width/self_add_count_reg_0_s0/Q</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_2_s1/Q</td>
 </tr>
 <tr>
-<td>1.438</td>
+<td>1.132</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/osk_pulse/n8_s4/I0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n232_s2/I0</td>
 </tr>
 <tr>
-<td>1.964</td>
+<td>1.659</td>
 <td>0.526</td>
 <td>tINS</td>
 <td>RR</td>
-<td>3</td>
-<td>dds_control/osk_pulse/n8_s4/F</td>
+<td>6</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n232_s2/F</td>
 </tr>
 <tr>
-<td>2.339</td>
+<td>2.034</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/osk_pulse/n8_s5/I2</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n228_s1/I0</td>
 </tr>
 <tr>
-<td>2.800</td>
+<td>2.560</td>
+<td>0.526</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n228_s1/F</td>
+</tr>
+<tr>
+<td>2.935</td>
+<td>0.375</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n226_s1/I2</td>
+</tr>
+<tr>
+<td>3.396</td>
 <td>0.461</td>
 <td>tINS</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/osk_pulse/n8_s5/F</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n226_s1/F</td>
 </tr>
 <tr>
-<td>3.175</td>
+<td>3.771</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/osk_pulse/n8_s3/I1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n226_s2/I0</td>
 </tr>
 <tr>
-<td>3.691</td>
-<td>0.516</td>
+<td>4.298</td>
+<td>0.526</td>
 <td>tINS</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/osk_pulse/n8_s3/F</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n226_s2/F</td>
 </tr>
 <tr>
-<td>4.066</td>
+<td>4.673</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/osk_pulse/n8_s0/I3</td>
-</tr>
-<tr>
-<td>4.329</td>
-<td>0.262</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/osk_pulse/n8_s0/F</td>
-</tr>
-<tr>
-<td>4.704</td>
-<td>0.375</td>
-<td>tNET</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/osk_pulse/pulse_valid_out_reg_s0/D</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_10_s1/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -960,36 +937,36 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <th>NODE</th>
 </tr>
 <tr>
-<td>2.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>2.305</td>
-<td>0.305</td>
+<td>10.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>2.680</td>
+<td>10.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/osk_pulse/pulse_valid_out_reg_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_10_s1/CLK</td>
 </tr>
 <tr>
-<td>2.616</td>
+<td>10.311</td>
 <td>-0.064</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>dds_control/osk_pulse/pulse_valid_out_reg_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_length_10_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -1000,7 +977,7 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>2.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
@@ -1009,7 +986,7 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 1.766, 43.896%; route: 1.875, 46.598%; tC2Q: 0.382, 9.506%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.040, 47.469%; route: 1.875, 43.630%; tC2Q: 0.382, 8.901%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 </table>
@@ -1019,31 +996,31 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-1.460</td>
+<td>5.639</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>4.076</td>
+<td>4.673</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>2.616</td>
+<td>10.311</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>dds_control/drover_reg_0_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/match_bitwise_pre_reg_14_s0</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>dds_control/triger_state_0_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/match_sep_s0</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -1062,87 +1039,103 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>0.305</td>
-<td>0.305</td>
+<td>0.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>0.680</td>
+<td>0.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/drover_reg_0_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/match_bitwise_pre_reg_14_s0/CLK</td>
 </tr>
 <tr>
-<td>1.062</td>
+<td>0.757</td>
 <td>0.382</td>
 <td>tC2Q</td>
 <td>RR</td>
 <td>2</td>
-<td>dds_control/drover_reg_0_s0/Q</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/match_bitwise_pre_reg_14_s0/Q</td>
 </tr>
 <tr>
-<td>1.438</td>
+<td>1.132</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n84_s12/I0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/n581_s16/I0</td>
 </tr>
 <tr>
-<td>1.964</td>
+<td>1.659</td>
 <td>0.526</td>
 <td>tINS</td>
 <td>RR</td>
-<td>2</td>
-<td>dds_control/n84_s12/F</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/n581_s16/F</td>
 </tr>
 <tr>
-<td>2.339</td>
+<td>2.034</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n85_s11/I2</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/n581_s12/I0</td>
 </tr>
 <tr>
-<td>2.800</td>
+<td>2.560</td>
+<td>0.526</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/n581_s12/F</td>
+</tr>
+<tr>
+<td>2.935</td>
+<td>0.375</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/n581_s8/I2</td>
+</tr>
+<tr>
+<td>3.396</td>
 <td>0.461</td>
 <td>tINS</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n85_s11/F</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/n581_s8/F</td>
 </tr>
 <tr>
-<td>3.175</td>
+<td>3.771</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n85_s10/I0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/n581_s7/I0</td>
 </tr>
 <tr>
-<td>3.701</td>
+<td>4.298</td>
 <td>0.526</td>
 <td>tINS</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/n85_s10/F</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/n581_s7/F</td>
 </tr>
 <tr>
-<td>4.076</td>
+<td>4.673</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/triger_state_0_s0/D</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/match_sep_s0/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -1156,36 +1149,36 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <th>NODE</th>
 </tr>
 <tr>
-<td>2.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>2.305</td>
-<td>0.305</td>
+<td>10.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>2.680</td>
+<td>10.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/triger_state_0_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/match_sep_s0/CLK</td>
 </tr>
 <tr>
-<td>2.616</td>
+<td>10.311</td>
 <td>-0.064</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>dds_control/triger_state_0_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_match_0/match_sep_s0</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -1196,16 +1189,16 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>2.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>4</td>
+<td>5</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 1.514, 44.572%; route: 1.500, 44.166%; tC2Q: 0.382, 11.262%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.040, 47.469%; route: 1.875, 43.630%; tC2Q: 0.382, 8.901%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 </table>
@@ -1215,31 +1208,31 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-0.652</td>
+<td>5.639</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>3.269</td>
+<td>4.672</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>2.616</td>
+<td>10.311</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>dds_control/drover_width/self_add_count_reg_0_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_6_s1</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>dds_control/drover_width/self_add_count_reg_15_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_1_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk[R]</td>
+<td>sysclk_bufg/clk_500m[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -1258,279 +1251,103 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>0.305</td>
-<td>0.305</td>
+<td>0.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>0.680</td>
+<td>0.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/drover_width/self_add_count_reg_0_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_6_s1/CLK</td>
 </tr>
 <tr>
-<td>1.062</td>
+<td>0.757</td>
 <td>0.382</td>
 <td>tC2Q</td>
 <td>RR</td>
-<td>4</td>
-<td>dds_control/drover_width/self_add_count_reg_0_s0/Q</td>
+<td>10</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_6_s1/Q</td>
 </tr>
 <tr>
-<td>1.438</td>
-<td>0.375</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n21_s/I1</td>
-</tr>
-<tr>
-<td>2.000</td>
-<td>0.562</td>
-<td>tINS</td>
-<td>RF</td>
-<td>1</td>
-<td>dds_control/drover_width/n21_s/COUT</td>
-</tr>
-<tr>
-<td>2.000</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>dds_control/drover_width/n20_s/CIN</td>
-</tr>
-<tr>
-<td>2.050</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>FR</td>
-<td>1</td>
-<td>dds_control/drover_width/n20_s/COUT</td>
-</tr>
-<tr>
-<td>2.050</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n19_s/CIN</td>
-</tr>
-<tr>
-<td>2.100</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n19_s/COUT</td>
-</tr>
-<tr>
-<td>2.100</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n18_s/CIN</td>
-</tr>
-<tr>
-<td>2.150</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n18_s/COUT</td>
-</tr>
-<tr>
-<td>2.150</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n17_s/CIN</td>
-</tr>
-<tr>
-<td>2.200</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n17_s/COUT</td>
-</tr>
-<tr>
-<td>2.200</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n16_s/CIN</td>
-</tr>
-<tr>
-<td>2.250</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n16_s/COUT</td>
-</tr>
-<tr>
-<td>2.250</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n15_s/CIN</td>
-</tr>
-<tr>
-<td>2.300</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n15_s/COUT</td>
-</tr>
-<tr>
-<td>2.300</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n14_s/CIN</td>
-</tr>
-<tr>
-<td>2.350</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n14_s/COUT</td>
-</tr>
-<tr>
-<td>2.350</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n13_s/CIN</td>
-</tr>
-<tr>
-<td>2.400</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n13_s/COUT</td>
-</tr>
-<tr>
-<td>2.400</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n12_s/CIN</td>
-</tr>
-<tr>
-<td>2.450</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n12_s/COUT</td>
-</tr>
-<tr>
-<td>2.450</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n11_s/CIN</td>
-</tr>
-<tr>
-<td>2.500</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n11_s/COUT</td>
-</tr>
-<tr>
-<td>2.500</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n10_s/CIN</td>
-</tr>
-<tr>
-<td>2.550</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n10_s/COUT</td>
-</tr>
-<tr>
-<td>2.550</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n9_s/CIN</td>
-</tr>
-<tr>
-<td>2.600</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n9_s/COUT</td>
-</tr>
-<tr>
-<td>2.600</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n8_s/CIN</td>
-</tr>
-<tr>
-<td>2.650</td>
-<td>0.050</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n8_s/COUT</td>
-</tr>
-<tr>
-<td>2.650</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>RR</td>
-<td>2</td>
-<td>dds_control/drover_width/n7_s/CIN</td>
-</tr>
-<tr>
-<td>2.894</td>
-<td>0.244</td>
-<td>tINS</td>
-<td>RR</td>
-<td>1</td>
-<td>dds_control/drover_width/n7_s/SUM</td>
-</tr>
-<tr>
-<td>3.269</td>
+<td>1.132</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/drover_width/self_add_count_reg_15_s0/D</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s7/I0</td>
+</tr>
+<tr>
+<td>1.659</td>
+<td>0.526</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s7/F</td>
+</tr>
+<tr>
+<td>2.034</td>
+<td>0.375</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s5/I0</td>
+</tr>
+<tr>
+<td>2.560</td>
+<td>0.526</td>
+<td>tINS</td>
+<td>RR</td>
+<td>2</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s5/F</td>
+</tr>
+<tr>
+<td>2.935</td>
+<td>0.375</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s4/I0</td>
+</tr>
+<tr>
+<td>3.461</td>
+<td>0.526</td>
+<td>tINS</td>
+<td>RR</td>
+<td>12</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n338_s4/F</td>
+</tr>
+<tr>
+<td>3.836</td>
+<td>0.375</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n348_s1/I2</td>
+</tr>
+<tr>
+<td>4.297</td>
+<td>0.461</td>
+<td>tINS</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/n348_s1/F</td>
+</tr>
+<tr>
+<td>4.672</td>
+<td>0.375</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_1_s1/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -1544,36 +1361,36 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 <th>NODE</th>
 </tr>
 <tr>
-<td>2.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>system_clk/PLLA_inst/CLKOUT0.default_gen_clk</td>
+<td>sysclk_bufg/clk_500m</td>
 </tr>
 <tr>
-<td>2.305</td>
-<td>0.305</td>
+<td>10.000</td>
+<td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
-<td>25</td>
-<td>system_clk/PLLA_inst/CLKOUT0</td>
+<td>154</td>
+<td>sysclk_bufg/dce_inst/CLKOUT</td>
 </tr>
 <tr>
-<td>2.680</td>
+<td>10.375</td>
 <td>0.375</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>dds_control/drover_width/self_add_count_reg_15_s0/CLK</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_1_s1/CLK</td>
 </tr>
 <tr>
-<td>2.616</td>
+<td>10.311</td>
 <td>-0.064</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>dds_control/drover_width/self_add_count_reg_15_s0</td>
+<td>gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/capture_mem_addr_1_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -1584,16 +1401,16 @@ D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\gwsynthesis
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>2.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>4</td>
+<td>5</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 1.456, 56.253%; route: 0.750, 28.972%; tC2Q: 0.382, 14.775%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.040, 47.469%; route: 1.875, 43.630%; tC2Q: 0.382, 8.901%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.375, 100.000%</td></tr>
 </table>

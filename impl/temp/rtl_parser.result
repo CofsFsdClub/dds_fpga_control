@@ -1,71 +1,161 @@
 [
  {
-  "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
+  "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_time_control.v",
+  "InstLine" : 23,
+  "InstName" : "dds_time_control",
+  "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_time_control.v",
+  "ModuleLine" : 23,
+  "ModuleName" : "dds_time_control",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_time_control.v",
+    "InstLine" : 114,
+    "InstName" : "drover_width",
+    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/pulse2width.v",
+    "ModuleLine" : 24,
+    "ModuleName" : "pulse2width"
+   },
+   {
+    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_time_control.v",
+    "InstLine" : 160,
+    "InstName" : "osk_pulse",
+    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/width2pulse.v",
+    "ModuleLine" : 23,
+    "ModuleName" : "width2pulse"
+   }
+  ]
+ },
+ {
+  "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/system.v",
   "InstLine" : 3,
   "InstName" : "system",
-  "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
+  "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/system.v",
   "ModuleLine" : 3,
   "ModuleName" : "system",
   "SubInsts" : [
    {
-    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
-    "InstLine" : 47,
+    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/system.v",
+    "InstLine" : 52,
     "InstName" : "system_clk",
-    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/gowin_pll/gowin_pll.v",
+    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/gowin_pll/gowin_pll.v",
     "ModuleLine" : 10,
     "ModuleName" : "Gowin_PLL"
    },
    {
-    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
-    "InstLine" : 70,
-    "InstName" : "dds_control",
-    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_time_control.v",
-    "ModuleLine" : 23,
-    "ModuleName" : "dds_time_control",
+    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/system.v",
+    "InstLine" : 59,
+    "InstName" : "sysclk_bufg",
+    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/gowin_dce/gowin_dce.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_DCE"
+   },
+   {
+    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/system.v",
+    "InstLine" : 77,
+    "InstName" : "dds_cmd_set",
+    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_cmd_set.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "dds_cmd_set",
     "SubInsts" : [
      {
-      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_time_control.v",
-      "InstLine" : 108,
+      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_cmd_set.v",
+      "InstLine" : 37,
+      "InstName" : "uart_rec_decode",
+      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/uart/uart_decode.v",
+      "ModuleLine" : 23,
+      "ModuleName" : "uart_decode",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/uart/uart_decode.v",
+        "InstLine" : 56,
+        "InstName" : "u_uart_rx",
+        "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/uart/uart_rx.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "uart_rx"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_cmd_set.v",
+      "InstLine" : 56,
+      "InstName" : "u_uart_tx",
+      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/uart/uart_tx.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "uart_tx"
+     },
+     {
+      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_cmd_set.v",
+      "InstLine" : 73,
+      "InstName" : "uart2spi_decode",
+      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/uart2spi_decode.v",
+      "ModuleLine" : 21,
+      "ModuleName" : "uart2spi_decode",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/uart2spi_decode.v",
+        "InstLine" : 396,
+        "InstName" : "spi_master_width40",
+        "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/spi/spi_master.v",
+        "ModuleLine" : 2,
+        "ModuleName" : "SPI_Master",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/spi/spi_master.v",
+          "InstLine" : 162,
+          "InstName" : "SPI_Clock_Inst",
+          "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/spi/spi_clock.v",
+          "ModuleLine" : 2,
+          "ModuleName" : "spi_clock"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/uart2spi_decode.v",
+        "InstLine" : 424,
+        "InstName" : "spi_master_width72",
+        "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/spi/spi_master.v",
+        "ModuleLine" : 2,
+        "ModuleName" : "SPI_Master",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/spi/spi_master.v",
+          "InstLine" : 162,
+          "InstName" : "SPI_Clock_Inst",
+          "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/spi/spi_clock.v",
+          "ModuleLine" : 2,
+          "ModuleName" : "spi_clock"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/system.v",
+    "InstLine" : 105,
+    "InstName" : "dds_control",
+    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_control_v5.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "dds_control_v5",
+    "SubInsts" : [
+     {
+      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_control_v5.v",
+      "InstLine" : 70,
       "InstName" : "drover_width",
-      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/pulse2width.v",
+      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/pulse2width.v",
       "ModuleLine" : 24,
       "ModuleName" : "pulse2width"
      },
      {
-      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_time_control.v",
-      "InstLine" : 154,
+      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/dds_control_v5.v",
+      "InstLine" : 90,
       "InstName" : "osk_pulse",
-      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/width2pulse.v",
+      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control_2/src/ad9910/width2pulse.v",
       "ModuleLine" : 23,
       "ModuleName" : "width2pulse"
      }
     ]
-   },
-   {
-    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
-    "InstLine" : 97,
-    "InstName" : "uart_rec_decode",
-    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/uart/uart_decode.v",
-    "ModuleLine" : 23,
-    "ModuleName" : "uart_decode",
-    "SubInsts" : [
-     {
-      "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/uart/uart_decode.v",
-      "InstLine" : 55,
-      "InstName" : "u_uart_rx",
-      "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/uart/uart_rx.v",
-      "ModuleLine" : 1,
-      "ModuleName" : "uart_rx"
-     }
-    ]
-   },
-   {
-    "InstFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v",
-    "InstLine" : 113,
-    "InstName" : "u_uart_tx",
-    "ModuleFile" : "D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/uart/uart_tx.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "uart_tx"
    }
   ]
  }

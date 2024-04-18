@@ -11,9 +11,15 @@ module system(
   output drctl,
   output drhold, //目前用不上
 
-  output clk_locked, //调试阶段用作指示，封机阶段用作复位信号
   output master_reset,
-  output sweep_sel,
+  output pf0,
+  output pf1,
+  output pf2,
+  output exit_pwr_over,
+  output txenable,
+
+  output clk_locked, //调试阶段用作指示，封机阶段用作复位信号  
+  output sweep_sel, //调试阶段用作指示
   
   output spi_clk,
   output spi_mosi,
@@ -30,42 +36,71 @@ module system(
 );
 
 //- - - - - - - - - - DDS初始化所需引脚 - - - - - - - - - - - - -//
-/*
-//外部GPIO 引脚定义
-#define MASTER_RESET_PIN 	1
-#define IO_UPDATE_PIN 		2
-#define SPI_CS_PIN 			3
-#define SWEEP_SEL_PIN 		4
-*/
 
-wire clk_1G;//试验无法成功触发，但是做了时序约束,可以让锁相环正常工作
+assign master_reset = ~clk_locked;
+assign pf0 = 1'b0;
+assign pf1 = 1'b0;
+assign pf2 = 1'b0;
+assign exit_pwr_over = 1'b0;
+assign txenable = 1'b0;
+//- - - - - - - - - - 系统时钟 - - - - - - - - - - - - -//
 wire clk_250m;
 wire clk_500m;
+wire clk_500mA;
 wire clk_50m;
 
-//- - - - - - - - - - 系统时钟 - - - - - - - - - - - - -//
     Gowin_PLL system_clk(
         .lock(clk_locked), //output lock
-        .clkout0(clk_500m), //output clkout0
+        .clkout0(clk_500mA), //output clkout0
         .clkout1(clk_50m), //output clkout1
         .clkin(clk_in), //input clkin
         .reset(resetn_in) //input reset
     );
+   Gowin_DCE sysclk_bufg(
+        .clkout(clk_500m), //output clkout
+        .clkin(clk_500mA), //input clkin
+        .ce(clk_locked) //input ce
+    );
+
+//- - - - - - - - - - DDS串口指令解析部分  - - - - - - - - - - - - -//
+parameter UART_BPS = 115200; //串口波特率
+parameter CLK_FREQ = 50000000; //串口时钟
+wire pulse_position;
+wire [15:0]triger_pulse;
+dds_cmd_set#(
+    .UART_BPS(UART_BPS),
+    .CLK_FREQ(CLK_FREQ),			/* 模块时钟输入，单位为MHz */
+	.SPI_CLK(2000),		    /* SPI时钟频率，单位为KHz */
+    .HEAD_FREAME_1(8'hAA), //定义头帧1
+    .HEAD_FREAME_2(8'h55),//定义头帧2
+    .END_FREAME(8'hCE) //定义尾帧	
+ ) dds_cmd_set(
+    .sys_clk(clk_50m),			//50M系统时钟
+	.sys_rst(resetn_in),			//系统复位
+
+	.pulse_position(pulse_position),
+    .triger_pulse(triger_pulse), //设置脉宽
+
+    .uart_rxd(uart_rxd),
+	.uart_txd(uart_txd),
+
+    .SCK_O(spi_clk),
+	.MOSI_O(spi_mosi),
+	.MISO_I(spi_miso),
+	.CS_O(spi_cs)
+);
+
+
 //- - - - - - - - - - DDS时序控制部分 - - - - - - - - - - - - -//
-parameter FRE = 10000;
-parameter PULSE = 2000; //实际脉宽为FULSE/2 us
+//parameter FRE = 10000;
+//parameter PULSE = 2000; //实际脉宽为FULSE/2 us
 parameter CLKNUM50M = 20;//时钟 1/50MHz = 20ns 
 parameter CLKNUM250M = 4;//时钟 1/250MHz = 4ns
-
 parameter CLKNUM500M = 2;//时钟 1/500MHz = 2ns 时序紧张
-parameter CLKNUM1G = 1;//时钟 1/1G = 1ns 时序紧张
-     
-assign sweep_sel = 1'b1;//给到软核端口控制,仿真中给定制
+assign sweep_sel = pulse_position;//给到软核端口控制 取pulse_position的第一位
 assign drhold = 1'b0;
 
-dds_time_control#(
-    .FRE(FRE),//Hz  10kHz
-    .PULSE(PULSE),//ns 2us
+dds_control_v5#(
     .CLKNUM(CLKNUM500M) //ns 
 ) dds_control(
     .sys_clk(clk_500m),//250MHz
@@ -79,45 +114,8 @@ dds_time_control#(
     .osk(osk),
     .drctl(drctl),
     .drhold(drhold),
-   
+
+    .triger_pulse(triger_pulse)//ns 2us   
     );
-//- - - - - - - - - - DDS串口指令解析部分 - - - - - - - - - - - - -//
-parameter UART_BPS = 115200; //串口波特率
-parameter CLK_FREQ = 50000000; //串口时钟
-wire [7:0]  addr_data;
-wire [7:0] cmd_data;
-
-wire addr_data_valid;
-wire cmd_data_valid;
-
-uart_decode#(
-    .UART_BPS(UART_BPS),
-    .CLK_FREQ(CLK_FREQ),
-    .HEAD_FREAME(8'hA6), //8'hA6 定义头帧
-    .END_FREAME(8'hCE) //8'hCE 定义尾帧
-)uart_rec_decode(
-    .sys_clk(clk_50m),			//50M系统时钟
-    .sys_rst_n(resetn_in),			//系统复位
-    
-    .uart_rxd(uart_rxd),          //串口接收引脚
-    
-    .addr_data(addr_data),
-    .cmd_data(cmd_data),
-    .addr_data_valid(addr_data_valid),
-    .cmd_data_valid(cmd_data_valid)
-);
-
-//放在这里测试用
-uart_tx#(
-	.BPS		    (UART_BPS),
-	.SYS_CLK_FRE	(CLK_FREQ))
-u_uart_tx(
-	.sys_clk		(clk_50m),
-	.sys_rst_n	    (resetn_in),
-	.uart_tx_en		(cmd_data_valid),
-	.uart_data	    (cmd_data),	
-	.uart_txd	    (uart_txd)
-);
-
 
 endmodule

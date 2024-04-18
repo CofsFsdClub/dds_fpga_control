@@ -2,65 +2,57 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="clk_in" trig_type="0" storage_depth="8192" window_num="1" capture_amount="32" implementation="0" trigger_pos="2" module_name="system" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+    <AoCore index="0" sample_clock="clk_500m" trig_type="0" storage_depth="4096" window_num="1" capture_amount="4096" implementation="0" trigger_pos="0" module_name="system" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
         <SignalList>
-            <Bus capture_enable="true" name="addr_data[7:0]">
-                <Signal>addr_data[7]</Signal>
-                <Signal>addr_data[6]</Signal>
-                <Signal>addr_data[5]</Signal>
-                <Signal>addr_data[4]</Signal>
-                <Signal>addr_data[3]</Signal>
-                <Signal>addr_data[2]</Signal>
-                <Signal>addr_data[1]</Signal>
-                <Signal>addr_data[0]</Signal>
+            <Bus capture_enable="true" name="triger_pulse[15:0]">
+                <Signal>triger_pulse[15]</Signal>
+                <Signal>triger_pulse[14]</Signal>
+                <Signal>triger_pulse[13]</Signal>
+                <Signal>triger_pulse[12]</Signal>
+                <Signal>triger_pulse[11]</Signal>
+                <Signal>triger_pulse[10]</Signal>
+                <Signal>triger_pulse[9]</Signal>
+                <Signal>triger_pulse[8]</Signal>
+                <Signal>triger_pulse[7]</Signal>
+                <Signal>triger_pulse[6]</Signal>
+                <Signal>triger_pulse[5]</Signal>
+                <Signal>triger_pulse[4]</Signal>
+                <Signal>triger_pulse[3]</Signal>
+                <Signal>triger_pulse[2]</Signal>
+                <Signal>triger_pulse[1]</Signal>
+                <Signal>triger_pulse[0]</Signal>
             </Bus>
-            <Bus capture_enable="true" name="cmd_data[7:0]">
-                <Signal>cmd_data[7]</Signal>
-                <Signal>cmd_data[6]</Signal>
-                <Signal>cmd_data[5]</Signal>
-                <Signal>cmd_data[4]</Signal>
-                <Signal>cmd_data[3]</Signal>
-                <Signal>cmd_data[2]</Signal>
-                <Signal>cmd_data[1]</Signal>
-                <Signal>cmd_data[0]</Signal>
-            </Bus>
-            <Signal capture_enable="true">addr_data_valid</Signal>
-            <Signal capture_enable="true">cmd_data_valid</Signal>
-            <Bus capture_enable="true" name="uart_rec_decode/byte_rec[7:0]">
-                <Signal>uart_rec_decode/byte_rec[7]</Signal>
-                <Signal>uart_rec_decode/byte_rec[6]</Signal>
-                <Signal>uart_rec_decode/byte_rec[5]</Signal>
-                <Signal>uart_rec_decode/byte_rec[4]</Signal>
-                <Signal>uart_rec_decode/byte_rec[3]</Signal>
-                <Signal>uart_rec_decode/byte_rec[2]</Signal>
-                <Signal>uart_rec_decode/byte_rec[1]</Signal>
-                <Signal>uart_rec_decode/byte_rec[0]</Signal>
-            </Bus>
+            <Signal capture_enable="true">pulse_position</Signal>
+            <Signal capture_enable="true">osk</Signal>
+            <Signal capture_enable="true">drctl</Signal>
+            <Signal capture_enable="true">drover</Signal>
+            <Signal capture_enable="true">io_update</Signal>
         </SignalList>
         <Triggers>
             <Trigger index="0">
                 <SignalList>
-                    <Bus restorename="cmd_data[7:0]">
-                        <Signal>cmd_data[7]</Signal>
-                        <Signal>cmd_data[6]</Signal>
-                        <Signal>cmd_data[5]</Signal>
-                        <Signal>cmd_data[4]</Signal>
-                        <Signal>cmd_data[3]</Signal>
-                        <Signal>cmd_data[2]</Signal>
-                        <Signal>cmd_data[1]</Signal>
-                        <Signal>cmd_data[0]</Signal>
+                    <Bus restorename="triger_pulse[15:0]">
+                        <Signal>triger_pulse[15]</Signal>
+                        <Signal>triger_pulse[14]</Signal>
+                        <Signal>triger_pulse[13]</Signal>
+                        <Signal>triger_pulse[12]</Signal>
+                        <Signal>triger_pulse[11]</Signal>
+                        <Signal>triger_pulse[10]</Signal>
+                        <Signal>triger_pulse[9]</Signal>
+                        <Signal>triger_pulse[8]</Signal>
+                        <Signal>triger_pulse[7]</Signal>
+                        <Signal>triger_pulse[6]</Signal>
+                        <Signal>triger_pulse[5]</Signal>
+                        <Signal>triger_pulse[4]</Signal>
+                        <Signal>triger_pulse[3]</Signal>
+                        <Signal>triger_pulse[2]</Signal>
+                        <Signal>triger_pulse[1]</Signal>
+                        <Signal>triger_pulse[0]</Signal>
                     </Bus>
-                    <Signal>cmd_data_valid</Signal>
-                    <Bus restorename="uart_rec_decode/byte_rec[7:0]">
-                        <Signal>uart_rec_decode/byte_rec[7]</Signal>
-                        <Signal>uart_rec_decode/byte_rec[6]</Signal>
-                        <Signal>uart_rec_decode/byte_rec[5]</Signal>
-                        <Signal>uart_rec_decode/byte_rec[4]</Signal>
-                        <Signal>uart_rec_decode/byte_rec[3]</Signal>
-                        <Signal>uart_rec_decode/byte_rec[2]</Signal>
-                        <Signal>uart_rec_decode/byte_rec[1]</Signal>
-                        <Signal>uart_rec_decode/byte_rec[0]</Signal>
-                    </Bus>
+                    <Signal>pulse_position</Signal>
+                    <Signal>osk</Signal>
+                    <Signal>drctl</Signal>
+                    <Signal>io_update</Signal>
                 </SignalList>
             </Trigger>
             <Trigger index="1"/>
@@ -80,7 +72,7 @@
             <Trigger index="15"/>
         </Triggers>
         <MatchUnits>
-            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="10100110100000000" value1="00000000000000000" trigger="0"/>
+            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="XXXXXXXXXXXXXXXXXXX1" value1="00000000000000000000" trigger="0"/>
             <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
@@ -101,5 +93,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0000101110000010</GAO_ID>
+    <GAO_ID>1111100000001001</GAO_ID>
 </GAO_CONFIG>

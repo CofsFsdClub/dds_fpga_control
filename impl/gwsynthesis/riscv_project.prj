@@ -4,10 +4,16 @@
     <Version>beta</Version>
     <Device id="GW5A-25A" package="MBGA121N" speed="1" partNumber="GW5A-LV25MG121NC1/I0"/>
     <FileList>
+        <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_cmd_set.v" type="verilog"/>
+        <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_control_v5.v" type="verilog"/>
         <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\dds_time_control.v" type="verilog"/>
         <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\pulse2width.v" type="verilog"/>
+        <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\uart2spi_decode.v" type="verilog"/>
         <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\ad9910\width2pulse.v" type="verilog"/>
+        <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\gowin_dce\gowin_dce.v" type="verilog"/>
         <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\gowin_pll\gowin_pll.v" type="verilog"/>
+        <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\spi\spi_clock.v" type="verilog"/>
+        <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\spi\spi_master.v" type="verilog"/>
         <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\system.v" type="verilog"/>
         <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_decode.v" type="verilog"/>
         <File path="D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\uart\uart_rx.v" type="verilog"/>

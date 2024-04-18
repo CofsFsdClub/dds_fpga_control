@@ -5,10 +5,16 @@
     <Version>5</Version>
     <Device name="GW5A-25A" pn="GW5A-LV25MG121NC1/I0">gw5a25a-002</Device>
     <FileList>
+        <File path="src/ad9910/dds_cmd_set.v" type="file.verilog" enable="1"/>
+        <File path="src/ad9910/dds_control_v5.v" type="file.verilog" enable="1"/>
         <File path="src/ad9910/dds_time_control.v" type="file.verilog" enable="1"/>
         <File path="src/ad9910/pulse2width.v" type="file.verilog" enable="1"/>
+        <File path="src/ad9910/uart2spi_decode.v" type="file.verilog" enable="1"/>
         <File path="src/ad9910/width2pulse.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_dce/gowin_dce.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_pll/gowin_pll.v" type="file.verilog" enable="1"/>
+        <File path="src/spi/spi_clock.v" type="file.verilog" enable="1"/>
+        <File path="src/spi/spi_master.v" type="file.verilog" enable="1"/>
         <File path="src/system.v" type="file.verilog" enable="1"/>
         <File path="src/uart/uart_decode.v" type="file.verilog" enable="1"/>
         <File path="src/uart/uart_rx.v" type="file.verilog" enable="1"/>

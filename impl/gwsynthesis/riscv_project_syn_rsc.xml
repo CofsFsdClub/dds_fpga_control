@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="system" T_Register="563(0)" T_Alu="84(0)" T_Lut="658(0)" T_Bsram="14(0)">
-    <SubModule name="gw_gao_inst_0" Register="426" Alu="16" Lut="531" Bsram="14" T_Register="426(426)" T_Alu="16(16)" T_Lut="531(531)" T_Bsram="14(14)"/>
+<Module name="system" Lut="1" T_Register="1201(0)" T_Alu="75(0)" T_Lut="1343(1)" T_Bsram="6(0)">
+    <SubModule name="gw_gao_inst_0" Register="411" Alu="15" Lut="538" Bsram="6" T_Register="411(411)" T_Alu="15(15)" T_Lut="538(538)" T_Bsram="6(6)"/>
     <SubModule name="system_clk"/>
-    <SubModule name="dds_control" Register="8" Lut="12" T_Register="25(8)" T_Alu="15(0)" T_Lut="23(12)">
-        <SubModule name="drover_width" Register="16" Alu="15" Lut="2" T_Register="16(16)" T_Alu="15(15)" T_Lut="2(2)"/>
-        <SubModule name="osk_pulse" Register="1" Lut="9" T_Register="1(1)" T_Lut="9(9)"/>
+    <SubModule name="sysclk_bufg"/>
+    <SubModule name="dds_cmd_set" Register="17" T_Register="790(17)" T_Alu="60(0)" T_Lut="803(0)">
+        <SubModule name="uart_rec_decode" Register="48" Alu="30" Lut="57" T_Register="88(48)" T_Alu="45(30)" T_Lut="83(57)">
+            <SubModule name="u_uart_rx" Register="40" Alu="15" Lut="26" T_Register="40(40)" T_Alu="15(15)" T_Lut="26(26)"/>
+        </SubModule>
+        <SubModule name="u_uart_tx" Register="32" Alu="15" Lut="32" T_Register="32(32)" T_Alu="15(15)" T_Lut="32(32)"/>
+        <SubModule name="uart2spi_decode" Register="447" Lut="86" T_Register="653(447)" T_Lut="688(86)">
+            <SubModule name="spi_master_width40" Register="52" Lut="220" T_Register="87(52)" T_Lut="291(220)">
+                <SubModule name="SPI_Clock_Inst" Register="35" Lut="71" T_Register="35(35)" T_Lut="71(71)"/>
+            </SubModule>
+            <SubModule name="spi_master_width72" Register="84" Lut="236" T_Register="119(84)" T_Lut="311(236)">
+                <SubModule name="SPI_Clock_Inst" Register="35" Lut="75" T_Register="35(35)" T_Lut="75(75)"/>
+            </SubModule>
+        </SubModule>
     </SubModule>
-    <SubModule name="uart_rec_decode" Register="40" Alu="23" Lut="42" T_Register="80(40)" T_Alu="38(23)" T_Lut="72(42)">
-        <SubModule name="u_uart_rx" Register="40" Alu="15" Lut="30" T_Register="40(40)" T_Alu="15(15)" T_Lut="30(30)"/>
-    </SubModule>
-    <SubModule name="u_uart_tx" Register="32" Alu="15" Lut="32" T_Register="32(32)" T_Alu="15(15)" T_Lut="32(32)"/>
+    <SubModule name="dds_control" Lut="1" T_Lut="1(1)"/>
 </Module>

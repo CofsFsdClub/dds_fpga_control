@@ -1,96 +1,81 @@
 module gw_gao(
-    \addr_data[7] ,
-    \addr_data[6] ,
-    \addr_data[5] ,
-    \addr_data[4] ,
-    \addr_data[3] ,
-    \addr_data[2] ,
-    \addr_data[1] ,
-    \addr_data[0] ,
-    \cmd_data[7] ,
-    \cmd_data[6] ,
-    \cmd_data[5] ,
-    \cmd_data[4] ,
-    \cmd_data[3] ,
-    \cmd_data[2] ,
-    \cmd_data[1] ,
-    \cmd_data[0] ,
-    addr_data_valid,
-    cmd_data_valid,
-    \uart_rec_decode/byte_rec[7] ,
-    \uart_rec_decode/byte_rec[6] ,
-    \uart_rec_decode/byte_rec[5] ,
-    \uart_rec_decode/byte_rec[4] ,
-    \uart_rec_decode/byte_rec[3] ,
-    \uart_rec_decode/byte_rec[2] ,
-    \uart_rec_decode/byte_rec[1] ,
-    \uart_rec_decode/byte_rec[0] ,
-    clk_in,
+    \triger_pulse[15] ,
+    \triger_pulse[14] ,
+    \triger_pulse[13] ,
+    \triger_pulse[12] ,
+    \triger_pulse[11] ,
+    \triger_pulse[10] ,
+    \triger_pulse[9] ,
+    \triger_pulse[8] ,
+    \triger_pulse[7] ,
+    \triger_pulse[6] ,
+    \triger_pulse[5] ,
+    \triger_pulse[4] ,
+    \triger_pulse[3] ,
+    \triger_pulse[2] ,
+    \triger_pulse[1] ,
+    \triger_pulse[0] ,
+    pulse_position,
+    osk,
+    drctl,
+    drover,
+    io_update,
+    clk_500m,
     tms_pad_i,
     tck_pad_i,
     tdi_pad_i,
     tdo_pad_o
 );
 
-input \addr_data[7] ;
-input \addr_data[6] ;
-input \addr_data[5] ;
-input \addr_data[4] ;
-input \addr_data[3] ;
-input \addr_data[2] ;
-input \addr_data[1] ;
-input \addr_data[0] ;
-input \cmd_data[7] ;
-input \cmd_data[6] ;
-input \cmd_data[5] ;
-input \cmd_data[4] ;
-input \cmd_data[3] ;
-input \cmd_data[2] ;
-input \cmd_data[1] ;
-input \cmd_data[0] ;
-input addr_data_valid;
-input cmd_data_valid;
-input \uart_rec_decode/byte_rec[7] ;
-input \uart_rec_decode/byte_rec[6] ;
-input \uart_rec_decode/byte_rec[5] ;
-input \uart_rec_decode/byte_rec[4] ;
-input \uart_rec_decode/byte_rec[3] ;
-input \uart_rec_decode/byte_rec[2] ;
-input \uart_rec_decode/byte_rec[1] ;
-input \uart_rec_decode/byte_rec[0] ;
-input clk_in;
+input \triger_pulse[15] ;
+input \triger_pulse[14] ;
+input \triger_pulse[13] ;
+input \triger_pulse[12] ;
+input \triger_pulse[11] ;
+input \triger_pulse[10] ;
+input \triger_pulse[9] ;
+input \triger_pulse[8] ;
+input \triger_pulse[7] ;
+input \triger_pulse[6] ;
+input \triger_pulse[5] ;
+input \triger_pulse[4] ;
+input \triger_pulse[3] ;
+input \triger_pulse[2] ;
+input \triger_pulse[1] ;
+input \triger_pulse[0] ;
+input pulse_position;
+input osk;
+input drctl;
+input drover;
+input io_update;
+input clk_500m;
 input tms_pad_i;
 input tck_pad_i;
 input tdi_pad_i;
 output tdo_pad_o;
 
-wire \addr_data[7] ;
-wire \addr_data[6] ;
-wire \addr_data[5] ;
-wire \addr_data[4] ;
-wire \addr_data[3] ;
-wire \addr_data[2] ;
-wire \addr_data[1] ;
-wire \addr_data[0] ;
-wire \cmd_data[7] ;
-wire \cmd_data[6] ;
-wire \cmd_data[5] ;
-wire \cmd_data[4] ;
-wire \cmd_data[3] ;
-wire \cmd_data[2] ;
-wire \cmd_data[1] ;
-wire \cmd_data[0] ;
-wire addr_data_valid;
-wire cmd_data_valid;
-wire \uart_rec_decode/byte_rec[7] ;
-wire \uart_rec_decode/byte_rec[6] ;
-wire \uart_rec_decode/byte_rec[5] ;
-wire \uart_rec_decode/byte_rec[4] ;
-wire \uart_rec_decode/byte_rec[3] ;
-wire \uart_rec_decode/byte_rec[2] ;
-wire \uart_rec_decode/byte_rec[1] ;
-wire \uart_rec_decode/byte_rec[0] ;
-wire clk_in;
+wire \triger_pulse[15] ;
+wire \triger_pulse[14] ;
+wire \triger_pulse[13] ;
+wire \triger_pulse[12] ;
+wire \triger_pulse[11] ;
+wire \triger_pulse[10] ;
+wire \triger_pulse[9] ;
+wire \triger_pulse[8] ;
+wire \triger_pulse[7] ;
+wire \triger_pulse[6] ;
+wire \triger_pulse[5] ;
+wire \triger_pulse[4] ;
+wire \triger_pulse[3] ;
+wire \triger_pulse[2] ;
+wire \triger_pulse[1] ;
+wire \triger_pulse[0] ;
+wire pulse_position;
+wire osk;
+wire drctl;
+wire drover;
+wire io_update;
+wire clk_500m;
 wire tms_pad_i;
 wire tck_pad_i;
 wire tdi_pad_i;
@@ -164,9 +149,9 @@ gw_con_top  u_icon_top(
 
 ao_top_0  u_la0_top(
     .control(control0[9:0]),
-    .trig0_i({\cmd_data[7] ,\cmd_data[6] ,\cmd_data[5] ,\cmd_data[4] ,\cmd_data[3] ,\cmd_data[2] ,\cmd_data[1] ,\cmd_data[0] ,cmd_data_valid,\uart_rec_decode/byte_rec[7] ,\uart_rec_decode/byte_rec[6] ,\uart_rec_decode/byte_rec[5] ,\uart_rec_decode/byte_rec[4] ,\uart_rec_decode/byte_rec[3] ,\uart_rec_decode/byte_rec[2] ,\uart_rec_decode/byte_rec[1] ,\uart_rec_decode/byte_rec[0] }),
-    .data_i({\addr_data[7] ,\addr_data[6] ,\addr_data[5] ,\addr_data[4] ,\addr_data[3] ,\addr_data[2] ,\addr_data[1] ,\addr_data[0] ,\cmd_data[7] ,\cmd_data[6] ,\cmd_data[5] ,\cmd_data[4] ,\cmd_data[3] ,\cmd_data[2] ,\cmd_data[1] ,\cmd_data[0] ,addr_data_valid,cmd_data_valid,\uart_rec_decode/byte_rec[7] ,\uart_rec_decode/byte_rec[6] ,\uart_rec_decode/byte_rec[5] ,\uart_rec_decode/byte_rec[4] ,\uart_rec_decode/byte_rec[3] ,\uart_rec_decode/byte_rec[2] ,\uart_rec_decode/byte_rec[1] ,\uart_rec_decode/byte_rec[0] }),
-    .clk_i(clk_in)
+    .trig0_i({\triger_pulse[15] ,\triger_pulse[14] ,\triger_pulse[13] ,\triger_pulse[12] ,\triger_pulse[11] ,\triger_pulse[10] ,\triger_pulse[9] ,\triger_pulse[8] ,\triger_pulse[7] ,\triger_pulse[6] ,\triger_pulse[5] ,\triger_pulse[4] ,\triger_pulse[3] ,\triger_pulse[2] ,\triger_pulse[1] ,\triger_pulse[0] ,pulse_position,osk,drctl,io_update}),
+    .data_i({\triger_pulse[15] ,\triger_pulse[14] ,\triger_pulse[13] ,\triger_pulse[12] ,\triger_pulse[11] ,\triger_pulse[10] ,\triger_pulse[9] ,\triger_pulse[8] ,\triger_pulse[7] ,\triger_pulse[6] ,\triger_pulse[5] ,\triger_pulse[4] ,\triger_pulse[3] ,\triger_pulse[2] ,\triger_pulse[1] ,\triger_pulse[0] ,pulse_position,osk,drctl,drover,io_update}),
+    .clk_i(clk_500m)
 );
 
 endmodule

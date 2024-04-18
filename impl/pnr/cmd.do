@@ -4,12 +4,13 @@
 -cst D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\riscv_project.cst
 -cfg D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\impl\pnr\device.cfg
 -sdc D:\Program_Station\Embedded_Program\GOWIN_FPGA\dds_fpga_control\src\riscv_project.sdc
--gao_crc 0000101110000010
+-gao_crc 1111100000001001
 -bit
 -tr
 -ph
 -timing
 -cst_error
+-place_option 2
 -correct_hold 1
 -route_maxfan 23
 -global_freq 100.000

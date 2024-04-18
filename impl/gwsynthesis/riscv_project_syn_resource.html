@@ -33,7 +33,7 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td class="label">system (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v)</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
-<td align = "center">-</td>
+<td align = "center">1</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
@@ -41,11 +41,11 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 </tr>
 <td class="label">&nbsp&nbsp&nbsp&nbsp|--gw_gao_inst_0
  (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/impl/gwsynthesis/RTL_GAO/gw_gao_top.v)</td>
-<td align = "center">426</td>
-<td align = "center">16</td>
-<td align = "center">531</td>
+<td align = "center">411</td>
+<td align = "center">15</td>
+<td align = "center">538</td>
 <td align = "center">-</td>
-<td align = "center">14</td>
+<td align = "center">6</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
@@ -59,61 +59,111 @@ table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-co
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--dds_control
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--sysclk_bufg
  (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v)</td>
-<td align = "center">8</td>
-<td align = "center">-</td>
-<td align = "center">12</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
-<td align = "center">-</td>
-</tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--drover_width
- (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_time_control.v)</td>
-<td align = "center">16</td>
-<td align = "center">15</td>
-<td align = "center">2</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--osk_pulse
- (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_time_control.v)</td>
-<td align = "center">1</td>
-<td align = "center">-</td>
-<td align = "center">9</td>
-<td align = "center">-</td>
-<td align = "center">-</td>
-<td align = "center">-</td>
-<td align = "center">-</td>
-</tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--uart_rec_decode
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--dds_cmd_set
  (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v)</td>
-<td align = "center">40</td>
-<td align = "center">23</td>
-<td align = "center">42</td>
+<td align = "center">17</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_uart_rx
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uart_rec_decode
+ (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_cmd_set.v)</td>
+<td align = "center">48</td>
+<td align = "center">30</td>
+<td align = "center">57</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_uart_rx
  (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/uart/uart_decode.v)</td>
 <td align = "center">40</td>
 <td align = "center">15</td>
-<td align = "center">30</td>
+<td align = "center">26</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 </tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsp|--u_uart_tx
- (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v)</td>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_uart_tx
+ (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_cmd_set.v)</td>
 <td align = "center">32</td>
 <td align = "center">15</td>
 <td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--uart2spi_decode
+ (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/dds_cmd_set.v)</td>
+<td align = "center">447</td>
+<td align = "center">-</td>
+<td align = "center">86</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--spi_master_width40
+ (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/uart2spi_decode.v)</td>
+<td align = "center">52</td>
+<td align = "center">-</td>
+<td align = "center">220</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--SPI_Clock_Inst
+ (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/spi/spi_master.v)</td>
+<td align = "center">35</td>
+<td align = "center">-</td>
+<td align = "center">71</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--spi_master_width72
+ (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/ad9910/uart2spi_decode.v)</td>
+<td align = "center">84</td>
+<td align = "center">-</td>
+<td align = "center">236</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--SPI_Clock_Inst
+ (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/spi/spi_master.v)</td>
+<td align = "center">35</td>
+<td align = "center">-</td>
+<td align = "center">75</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--dds_control
+ (D:/Program_Station/Embedded_Program/GOWIN_FPGA/dds_fpga_control/src/system.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
 <td align = "center">-</td>
